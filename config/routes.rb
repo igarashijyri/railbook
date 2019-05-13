@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get 'view/form_tag'
   post 'view/create'
   get 'view/form_for'
+  get 'view/field'
+  get 'view/html5'
 end
