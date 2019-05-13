@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   get 'hello/index'
   get 'hello/view'
   get 'hello/list'
+  get 'view/keyword'
+  post 'keyword/search'
+  get 'view/form_tag'
+  post 'view/create'
+  get 'view/form_for'
 end
