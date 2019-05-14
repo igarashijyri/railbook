@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   get 'view/field'
   get 'view/html5'
   get 'view/select'
+  get 'view/col_select'
+  get 'view/group_select'
 end
