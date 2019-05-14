@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get 'view/form_for'
   get 'view/field'
   get 'view/html5'
+  get 'view/select'
 end
