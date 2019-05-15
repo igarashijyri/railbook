@@ -78,7 +78,7 @@ class RecordController < ApplicationController
   # scopeの呼出
   def scope
     # "技術評論社"を"降順"にする
-    @books = Book.gihyo.top10
+    @books = Book.hoge
     render  'hello/list'
   end
 
@@ -86,4 +86,16 @@ class RecordController < ApplicationController
     render plain: Review.all.inspect
   end
 
+  def transact
+    Book.transaction do
+      b1 = Book.new({isbn: '978-4-7741-5067-3', title: 'Rubyポケットリファレンス', price: 2580, publish: '技術評論社', published: '2017-04-17'})
+      b1.save!
+#      raise '例外発生：処理はキャンセルされました'
+      b2 = Book.new({isbn: '978-4-7741-5067-5', title: 'Tomcatポケットリファレンス', price: 2580, publish: '技術評論社', published: '2017-04-17'})
+      b2.save!
+    end
+    render plain: 'トランザクション成功'
+    rescue => e
+      render plain: e.message
+  end
 end

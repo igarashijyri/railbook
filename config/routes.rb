@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :members
   resources :fan_comments
   resources :reviews
   resources :authors
@@ -33,4 +34,5 @@ Rails.application.routes.draw do
   get 'record/where2'
   get 'record/scope'
   get 'record/def_scope'
+  get 'record/transact'
 end
