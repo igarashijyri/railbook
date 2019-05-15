@@ -49,6 +49,8 @@ class MembersController < ApplicationController
         format.json { render json: @member.errors, status: :unprocessable_entity }
       end
     end
+    rescue ActiveRecord::StaleObjectError
+    render plain: "競合発生" 
   end
 
   # DELETE /members/1

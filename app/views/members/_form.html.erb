@@ -21,10 +21,7 @@
     <%= form.text_field :email %>
   </div>
 
-  <div class="field">
-    <%= form.label :lock_version %>
-    <%= form.number_field :lock_version %>
-  </div>
+  <%= form.hidden_field :lock_version %>
 
   <div class="actions">
     <%= form.submit %>
