@@ -35,4 +35,8 @@ Rails.application.routes.draw do
   get 'record/scope'
   get 'record/def_scope'
   get 'record/transact'
+  get 'record/belongs'
+  get 'record/has_and_belongs'
+  get 'record/has_many_through'
+  get 'record/memorize'
 end

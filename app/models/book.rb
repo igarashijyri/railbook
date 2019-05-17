@@ -1,7 +1,7 @@
 class Book < ApplicationRecord
   has_many :reviews
-  has_and_belongs_to_many :authors
   has_many :users, through: :reviews
+  has_and_belongs_to_many :authors
   has_many :memos, as: :memoable
 
   validates :isbn, presence: true, uniqueness: true, length: { is: 17},
