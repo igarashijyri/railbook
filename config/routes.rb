@@ -39,4 +39,5 @@ Rails.application.routes.draw do
   get 'record/has_and_belongs'
   get 'record/has_many_through'
   get 'record/memorize'
+  get 'record/assoc_join'
 end
