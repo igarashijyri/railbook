@@ -127,5 +127,4 @@ class RecordController < ApplicationController
     order('books.title, reviews.updated_at').
     select('books.*, reviews.body, authors.name')
   end
-
 end
