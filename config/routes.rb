@@ -42,4 +42,10 @@ Rails.application.routes.draw do
   get 'view/adopt'
   get 'view/partial_basic'
   get 'record/assoc_join'
+  get 'ctrl/get_xml'
+  get 'ctrl/cookie'
+  post 'ctrl/cookie_rec'
+  get 'ctrl/session_show'
+  post 'ctrl/session_rec'
+  get 'ctrl/index'
 end
