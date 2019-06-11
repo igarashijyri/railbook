@@ -48,4 +48,5 @@ Rails.application.routes.draw do
   get 'ctrl/session_show'
   post 'ctrl/session_rec'
   get 'ctrl/index'
+  get 'login/index'
 end
