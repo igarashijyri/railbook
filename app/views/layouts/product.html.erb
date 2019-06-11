@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Railbookサンプル</title>
+</head>
+<body>
+
+<%= yield %>
+
+<%
+=begin
+%>
+<%= content_for?(:content) ? yield(:content) : yield %>-->
+<%
+=end
+%>
+
+</body>
+</html>

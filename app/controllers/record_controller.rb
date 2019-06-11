@@ -121,4 +121,11 @@ class RecordController < ApplicationController
       render plain: @memo.errors.full_messages[0]
     end
   end
+
+  def assoc_join
+    @books = Book.joins(:reviews, :authors).
+    order('books.title, reviews.updated_at').
+    select('books.*, reviews.body, authors.name')
+  end
+
 end

@@ -32,4 +32,12 @@ class ViewController < ApplicationController
     @authors = Author.all
   end
 
+  def adopt
+    render layout: 'sub'
+  end
+
+  def partial_basic
+    @book = Book.find(1)
+  end
+
 end
