@@ -1,8 +1,11 @@
 class CtrlController < ApplicationController
-  before_action :start_logger, only:[:index, :index2]
-  before_action :end_logger, except: :index
-  around_action :around_logger
-  before_action :auth, only: :index
+#  before_action :start_logger, only:[:index, :index2]
+#  before_action :end_logger, except: :index
+#  around_action :around_logger
+#  before_action :auth, only: :index
+
+  def device
+  end
 
   def get_xml
     @books = Book.all

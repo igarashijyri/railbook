@@ -19,7 +19,7 @@ class HelloController < ApplicationController
     if session[:usr]
       begin
         @usr = User.find(session[:usr])
-      rescue ActiveRecord::RecordNotfound
+      rescue ActiveRecord::RecordNotFound
         reset_session
       end
     end

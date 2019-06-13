@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :books
+  end
   resources :members
   resources :fan_comments
   resources :reviews
-  resources :authors
-  resources :users
-  resources :books
+  constraints(id: /[0-9]{1,2}/) do
+    resources :authors
+    resources :users
+  end
+  resources :books, constraints: { id: /[0-9]{1,2}/ }
   get 'hello/index'
   get 'hello/view'
   get 'hello/list'
@@ -49,4 +54,6 @@ Rails.application.routes.draw do
   post 'ctrl/session_rec'
   get 'ctrl/index'
   get 'login/index'
+  post 'login/auth'
+  get 'ctrl/device'
 end
