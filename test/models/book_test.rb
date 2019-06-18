@@ -10,6 +10,6 @@ class BookTest < ActiveSupport::TestCase
       published: '2017-02-14',
       dl: false
     })
-    assert_not book.save, 'Failed to save'
+    assert book.save, 'book saveに失敗'
   end
 end

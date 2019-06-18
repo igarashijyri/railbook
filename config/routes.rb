@@ -56,4 +56,8 @@ Rails.application.routes.draw do
   get 'login/index'
   post 'login/auth'
   get 'ctrl/device'
+  get 'ajax/index'
+  get 'ajax/upanel'
+  get 'ajax/search'
+  post 'ajax/result'
 end

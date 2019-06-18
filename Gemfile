@@ -43,6 +43,9 @@ gem 'pry-rails'
 gem 'pry-byebug'
 gem 'pry-doc'
 
+gem 'delayed_job_active_record'
+gem 'daemons'
+
 group :development, :test do
   # デバッグ
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
